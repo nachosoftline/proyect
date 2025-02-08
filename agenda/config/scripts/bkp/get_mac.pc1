@@ -1,0 +1,18 @@
+# get_mac.ps1
+
+# Obtener adaptadores de red activos
+$adapters = Get-NetAdapter | Where-Object { $_.Status -eq 'Up' }
+
+# Crear una lista para almacenar los resultados
+$results = @()
+
+# Recorrer cada adaptador y agregar su información a la lista
+foreach ($adapter in $adapters) {
+    $results += [PSCustomObject]@{
+        Name      = $adapter.Name
+        MacAddress = $adapter.MacAddress
+    }
+}
+
+# Convertir los resultados a JSON y escribir en la salida
+$results | ConvertTo-Json

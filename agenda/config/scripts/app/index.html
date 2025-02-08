@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
+</head>
+<body>
+    <div class="container text-center">
+        <img src="assets/logo.png" alt="Logo" style="width: 100px; height: 100px;">
+        <h1 class="mt-4">Bienvenido al Asistente</h1>
+        <p>Presiona el botón para comenzar el proceso de configuración</p>
+        <button id="startBtn" class="btn btn-primary">Iniciar</button>
+    </div>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        // Cuando el botón de iniciar es presionado, enviamos el mensaje
+        document.getElementById('startBtn').addEventListener('click', () => {
+            ipcRenderer.send('navigate-to-step1'); // Enviamos el mensaje al main.js
+        });
+    </script>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

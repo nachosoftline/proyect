@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+</head>
+<body>
+    <h1>Resultados de la Ejecución</h1>
+    <div id="report"></div>
+    <button id="closeButton">Cerrar</button>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        // Escuchar el evento para recibir los resultados de los scripts
+        ipcRenderer.on('execution-results', (event, results) => {
+            const reportDiv = document.getElementById('report');
+            reportDiv.innerHTML = ''; // Limpiar cualquier contenido anterior
+
+            // Iterar sobre los resultados de la ejecución
+            Object.keys(results).forEach(option => {
+                const result = results[option];
+                const resultText = document.createElement('p');
+                resultText.textContent = `${option.charAt(0).toUpperCase() + option.slice(1)}: ${result}`;
+                resultText.style.color = result === 'OK' ? 'green' : 'red';
+                reportDiv.appendChild(resultText);
+            });
+        });
+
+        // Manejar el botón de cerrar
+        document.getElementById('closeButton').addEventListener('click', () => {
+            window.close();
+        });
+    </script>
+</body>
+</html>
