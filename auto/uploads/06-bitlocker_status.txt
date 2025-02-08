@@ -1,0 +1,12 @@
+﻿Timestamp: 2024-12-23T12:38:56.7904120-08:00
+Status: Info
+Message: Activando BitLocker en C:
+Timestamp: 2024-12-23T12:38:56.9312864-08:00
+Status: Info
+Message: No se detectÃ³ un TPM. Usando una clave de recuperaciÃ³n.
+Timestamp: 2024-12-23T12:39:01.3365786-08:00
+Status: Info
+Message: Clave de recuperaciÃ³n de BitLocker: 
+Timestamp: 2024-12-23T12:39:03.2716036-08:00
+Status: Info
+Message: BitLocker ha comenzado el cifrado.

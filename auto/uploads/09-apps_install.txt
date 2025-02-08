@@ -1,0 +1,4 @@
+﻿Timestamp: 2025-01-30T21:35:40.9738627-06:00
+Message: No se detectÃ³ una unidad USB llamada 'Windows_11_us'.
+Timestamp: 2025-01-30T21:35:40.9821928-06:00
+Message: El script ha finalizado.

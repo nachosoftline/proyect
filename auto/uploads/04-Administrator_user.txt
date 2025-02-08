@@ -1,0 +1,3 @@
+﻿Cuenta: Usuario 'Administrator' estÃ¡ habilitado: False
+ContraseÃ±a: ContraseÃ±a establecida para la cuenta 'Administrator'.
+Grupo: Usuario 'Administrator' pertenece al grupo 'Administrators'.

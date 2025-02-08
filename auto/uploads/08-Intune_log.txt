@@ -1,0 +1,4 @@
+﻿Message: Iniciando la instalaciÃ³n del Portal de empresa desde Microsoft Store.
+Timestamp: 2025-01-30T21:35:35.1430674-06:00
+Message: Portal de empresa instalado satisfactoriamente.
+Timestamp: 2025-01-30T21:35:35.5550493-06:00

@@ -1,0 +1,4 @@
+﻿CurrentHostname: IBM-PF3QA95J
+NewHostname: GDLLPF3QA95J
+UpdatedHostname: IBM-PF3QA95J
+SerialNumber: PF3QA95J

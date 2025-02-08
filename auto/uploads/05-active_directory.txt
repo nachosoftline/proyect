@@ -1,0 +1,5 @@
+﻿Timestamp: 2025-01-30T21:35:22.1254389-06:00
+Computer: IBM-PF3QA95J
+Domain: fox-gdl.com
+Status: Error
+Message: Error al unir la mÃ¡quina al dominio: A parameter cannot be found that matches parameter name 'DomainController'.
