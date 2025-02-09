@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['admin_logged_in'])) {
+    header("Location: login.php");
+    exit();
+}
 require 'db/db.php';
 
 if (!isset($_SESSION['privilegio']) || $_SESSION['privilegio'] !== 'admin') {
