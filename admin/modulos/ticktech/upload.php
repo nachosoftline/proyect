@@ -1,16 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['admin_logged_in'])) {
-    header("Location: login.php");
-    exit();
-}
+require_once __DIR__ . '/../../includes/seguridad.php';
+require_once __DIR__ . '/../../includes/config.php';
+
+verificarSesion();
 require 'db/db.php';
-
-if (!isset($_SESSION['privilegio']) || $_SESSION['privilegio'] !== 'admin') {
-    header("HTTP/1.1 403 Forbidden");
-    exit("Acceso denegado");
-}
-
 $error = '';
 $success = '';
 
