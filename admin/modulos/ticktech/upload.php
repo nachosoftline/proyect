@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Generar nombre único
         $filename = 'vid_' . uniqid() . '.mp4';
-        $targetPath = __DIR__ . '/contenido/' . $filename;
+        $targetPath = __DIR__ . '../../../../videos/contenido/' . $filename;
 
         // Mover archivo
         if (!move_uploaded_file($file['tmp_name'], $targetPath)) {
@@ -165,5 +165,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Subir Video</button>
         </form>
     </div>
+    <script>
+        // Limpiar campo de archivo después de éxito
+        <?php if ($success): ?>
+            document.getElementById('fileInput').value = '';
+        <?php endif; ?>
+        
+        // Prevenir doble submit
+        let formSubmitted = false;
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            if (formSubmitted) {
+                e.preventDefault();
+                alert('El archivo ya se está subiendo');
+            }
+            formSubmitted = true;
+        });
+    </script>
 </body>
 </html>
